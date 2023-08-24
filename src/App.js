@@ -71,7 +71,7 @@ function App() {
       url: URL,
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_HUGGING_FACE_API_KEY}`,
+        Authorization: `Bearer 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`,
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
@@ -80,7 +80,7 @@ function App() {
       }),
       responseType: 'arraybuffer',
     })
-
+ 
     const type = response.headers['content-type']
     const data = response.data
 
@@ -106,6 +106,7 @@ function App() {
 
     // Save the URL
     const url = `https://ipfs.io/ipfs/${ipnft}/metadata.json`
+    console.log(url);
     setURL(url)
 
     return url
