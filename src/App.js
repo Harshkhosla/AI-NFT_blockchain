@@ -95,7 +95,7 @@ function App() {
     setMessage("Uploading Image...")
 
     // Create instance to NFT.Storage
-    const nftstorage = new NFTStorage({ token: process.env.REACT_APP_NFT_STORAGE_API_KEY })
+    const nftstorage = new NFTStorage({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGNmQ0QxMDYzNTFBRGQyNzBmM2MxN0U2YjM4OURjY0IwNUNGY2E4NTgiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5Mjg3MzUzNzUxMywibmFtZSI6IkhhcnNoIn0.w4G8I0iauECj9TszPSBUv6V5OvTYAr9rGEfYCz7TvYM" })
 
     // Send request to store image
     const { ipnft } = await nftstorage.store({
